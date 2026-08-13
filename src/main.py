@@ -4,6 +4,8 @@ from generators.servicos import gerar_servico
 from generators.vendas import gerar_vendas
 import pandas as pd
 from exporters.excel import salvar_como_excel
+from data_dirtying.clientes import sujar_clientes
+from data_dirtying.vendas import sujar_vendas
 
 
 QTD_CLIENTES = 50
