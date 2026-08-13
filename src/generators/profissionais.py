@@ -8,7 +8,7 @@ def gerar_profissionais(quantidade):
         profissional = {
             'id_profissional': id_profissional,
             'nome': fake.name(),
-            'telefone': fake.phone_number(),
+            'telefone': fake.cellphone_number(),
         }
 
         profissionais.append(profissional)

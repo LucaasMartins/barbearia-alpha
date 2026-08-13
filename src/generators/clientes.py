@@ -8,7 +8,7 @@ def gerar_clientes(quantidade):
         cliente = {
             'id_cliente': id_cliente,
             'nome': fake.name(),
-            'telefone': fake.phone_number(),
+            'telefone': fake.cellphone_number(),
         }
 
         clientes.append(cliente)
