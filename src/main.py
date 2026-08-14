@@ -6,12 +6,19 @@ import pandas as pd
 from exporters.excel import salvar_como_excel
 from data_dirtying.clientes import sujar_clientes
 from data_dirtying.vendas import sujar_vendas
+from pathlib import Path
 
+
+RAIZ_PROJETO = Path(__file__).parent.parent
+PASTA_DATA_RAW = RAIZ_PROJETO / "data" / "raw"
+PASTA_DATA_RAW.mkdir(parents=True, exist_ok=True)
 
 QTD_CLIENTES = 50
 QTD_PROFISSIONAIS = 5
 QTD_VENDAS = 200
-SUJAR_DADOS = False
+SUJAR_DADOS = True
+
+
 clientes = gerar_clientes(QTD_CLIENTES)
 profissionais = gerar_profissionais(QTD_PROFISSIONAIS)
 servicos = gerar_servico()
@@ -22,7 +29,7 @@ if SUJAR_DADOS:
     clientes = sujar_clientes(clientes)
     vendas = sujar_vendas(vendas)
 
-salvar_como_excel(clientes, '../data/raw/clientes.xlsx')
-salvar_como_excel(profissionais, '../data/raw/profissionais.xlsx')
-salvar_como_excel(servicos, '../data/raw/servicos.xlsx')
-salvar_como_excel(vendas, '../data/raw/vendas.xlsx')
+salvar_como_excel(clientes, PASTA_DATA_RAW / 'clientes.xlsx')
+salvar_como_excel(profissionais, PASTA_DATA_RAW / 'profissionais.xlsx')
+salvar_como_excel(servicos, PASTA_DATA_RAW / 'servicos.xlsx')
+salvar_como_excel(vendas, PASTA_DATA_RAW / 'vendas.xlsx')
