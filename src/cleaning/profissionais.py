@@ -1,7 +1,6 @@
 from cleaning.utils import padronizar_telefone
 
-def limpar_clientes(df):
+def limpar_profissionais(df):
     df['telefone'] = df['telefone'].apply(padronizar_telefone)
     df['nome'] = df['nome'].str.strip()
-    df = df.drop_duplicates(subset='id_cliente', keep='first')
     return df
