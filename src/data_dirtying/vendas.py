@@ -4,7 +4,7 @@ PORCENTAGEM_DUPLICATAS = 0.10
 PORCENTAGEM_VALORES_NEGATIVOS = 0.15
 
 def sujar_vendas(vendas):
-    vendas_sujas = [vendas.copy() for venda in vendas]
+    vendas_sujas = [venda.copy() for venda in vendas]
 
     quantidade_negativos = round(len(vendas) * PORCENTAGEM_VALORES_NEGATIVOS)
     vendas_para_negativar = random.sample(vendas_sujas, quantidade_negativos)
