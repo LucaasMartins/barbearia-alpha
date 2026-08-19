@@ -112,7 +112,7 @@ Abra `powerbi/barbearia_alpha.pbix` no Power BI Desktop para visualizar o dashbo
 
 ## Resultados
 
-![Dashboard Barbearia Alpha](assets/image.png)
+![Dashboard Barbearia Alpha](assets/dashboard.png)
 
 - 50 clientes, 5 profissionais, 4 serviços, ~170 vendas válidas processadas
 - Faturamento total: ~R$ 7.740 | Ticket médio: ~R$ 45,53
