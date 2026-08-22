@@ -118,8 +118,3 @@ Abra `powerbi/barbearia_alpha.pbix` no Power BI Desktop para visualizar o dashbo
 - Faturamento total: ~R$ 7.740 | Ticket médio: ~R$ 45,53
 - Pipeline testado com carga dupla, confirmando idempotência
 
-## Próximos passos
-
-- Containerizar o pipeline com Docker
-- Orquestrar as etapas com Airflow
-- Publicar o dashboard no Power BI Service para acesso remoto
